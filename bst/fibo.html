@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Fibonacci</title>
+</head>
+<body>
+  <script type="text/javascript">
+  	var a=0;
+  	var b=1;
+  	var c;
+    function fibo(){
+    	 var n = prompt("Enter limit",0);
+  	     document.write(a+"<br>");
+  	     document.write(b);
+         for (var i = 3; i < n; i++) {
+    	    c=a+b;
+    	    a=b;
+    	    b=c;
+    	    document.write("<br>"+c);
+         }
+    }
+    function sum(){
+    	var n= prompt("Enter array limit",0);
+    	var ar= [];
+    	for (var i = 0; i < n; i++) {
+    		ar[i]= prompt("Enter array elements:");
+    		a= parseInt(a) + parseInt(ar[i]);
+    	}
+    	document.write("<br>"+a);
+    }
+    function reverse(){
+        var n= prompt("Enter number to be reversed",0);
+    	//var d=  Math.floor(n % 10);
+    	//c=  parseInt(c) * parseInt(10) + parseInt(d);
+    	//n=  Math.floor(n / 10);
+        c=n.split("").reverse().join("");
+
+    	document.write("<br>"+c);
+    }
+  </script>
+
+  <button onclick="fibo();">Click to view Fibonacci Series!</button> <br><br>
+  <button onclick="sum();">Click to create array and view sum!</button><br><br>
+  <button onclick="reverse();">Click to reverse a number!</button>
+
+</body>
+</html>

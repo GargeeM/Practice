@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Starting JS</title>
+</head>
+<body>
+
+	<p id="paraHead">
+   	   Sample content!
+   </p
+   <div class="divSample">
+
+   </div>
+
+   <script type="text/javascript">
+   	 // alert(document.getElementById('paraHead').innerHTML);
+   	  //document.write("We are into JS!");
+
+   	  //console.log("For testing purposes");
+
+   	  //document.getElementById('paraHead').innerHTML = "This was written dynamically from JS."
+
+   	  //document.getElementsByClassName('divSample')[0].innerHTML = "Content set from JS through a class";
+      var counter=0;
+   	  function clickEvent(){
+   	  	
+   	  	
+   	  	counter++;
+   	  	document.getElementById("btn").innerHTML= "Button has been clicked "+counter+" times";
+   	  	console.log("Button has been clicked "+counter+" times");
+   	  	
+   	  }
+   </script>
+   <button onclick="clickEvent();">Click me!</button>
+
+   <p id="btn"></p>
+   
+</body>
+</html>

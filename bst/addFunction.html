@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Add Function</title>
+</head>
+<body>
+
+	<script type="text/javascript">
+		function addition(firstNum=0, secondNum=0){
+			  var sum = 0;
+              for (var i = 0; i <arguments.length; i++) {
+                 sum = sum + arguments[i];
+              }
+              return sum;
+		}
+		function add(){
+			s = addition(4,5,6,7);
+			document.getElementById('adding').innerHTML = ("Summation of given numbers: " + s);
+		}
+	</script>
+    
+    <button onclick="add();">Add</button><br>
+    <div id="adding">
+    	
+    </div>
+</body>
+</html>

@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Sign In</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<style type="text/css">
+		.card{
+           background-color: #fff !important;
+           border: 0;
+		}
+		.adjust{
+			float:right;
+			 
+		}
+	</style>
+</head>
+<body>
+  <div> 
+  <br><br> 
+    <div class="card text-black bg-primary shadow-lg" style="max-width: 40rem;margin:0 auto">
+
+    	<div class="card-body">
+    		<p class="display-4">Sign In</p><br>
+    		<form action="welcome.html" onsubmit="return fieldsValidation();">
+               <fieldset class="form-group">
+                              <input type="text" class="form-control" id="name" name="Name" placeholder="Enter your Name">
+               </fieldset>
+
+               <fieldset class="form-group">
+                             
+                             <select class="form-control" id="country" name="Country">
+
+                               <option>Select your Country</option>
+                               <option>India</option>
+                               <option>Nepal</option>
+                               <option>China</option>
+                               <option>Japan</option>
+                             </select>
+               </fieldset>
+
+               <fieldset class="form-group">
+
+                             <input type="text" class="form-control" id="address" name="Address" placeholder="Enter your address">
+               </fieldset>
+
+
+               <fieldset class="form-group">
+
+                             <input type="text" class="form-control" id="pincode" name="Pincode" placeholder="Enter your Pincode">
+               </fieldset>
+
+               <fieldset class="form-group">
+                            <p style="margin-left: 5px">Select your Gender:</p>
+                            <input class="form-check-input" style="margin-left: 12px" type="radio" name="Gender" id="Gender1" value="Male">
+                            <label class="form-check-label" style="margin-left: 30px" for="Gender1">
+                                Male
+                            </label>
+
+                            <input class="form-check-input" style="margin-left: 12px" type="radio" name="Gender" id="Gender2" value="Female">
+                            <label class="form-check-label" style="margin-left: 30px" for="Gender2">
+                                Female
+                            </label>
+
+                            <input class="form-check-input" style="margin-left: 12px" type="radio" name="Gender" id="Gender3" value="Transgender">
+                            <label class="form-check-label" style="margin-left: 30px" for="Gender3">
+                                Transgender
+                            </label>
+
+                            <input class="form-check-input" style="margin-left: 12px" type="radio" name="Gender" id="Gender4" value="Not Applicable" checked>
+                            <label class="form-check-label" style="margin-left: 30px" for="Gender4">
+                                Not Applicable
+                            </label>
+               </fieldset>
+
+               <fieldset class="form-group">
+                              <p style="margin-left: 5px">Enter your Date of Birth:</p>
+                             <input type="date" class="form-control" id="dob" name="Dob" placeholder="Enter your Date of Birth">
+               </fieldset>
+
+               <fieldset class="form-group">
+
+                             <input type="text" class="form-control" id="contact" name="Contact" placeholder="Enter your Contact Number">
+               </fieldset>
+
+               <fieldset class="form-group">
+
+                             <input type="text" class="form-control" id="password" name="Password" placeholder="Password">
+               </fieldset>
+
+               
+               		<div class="form-check">
+               			<label for="remember-me" class="form-check-label"><input class="form-check-input" id="remember-me" name="remember-me" type="checkbox">
+               			Remember Me</label>
+               			<a class="adjust" href="#">Forgot Password?</a>
+               		</div>
+               
+               	<br>
+               <button type="submit" class="btn btn-primary">Sign in</button><br><br>
+               <div>
+               	   Not a member yet?<a href="#"> Get an Adobe ID</a>
+               </div>
+
+            </form>	
+    		
+    		
+    	</div>
+    	
+    </div>
+    <br><br>
+
+ <script type="text/javascript">
+   
+      function fieldsValidation(){
+     // console.log(document.getElementById('stdName').value.length);
+    if (document.getElementById('name').value == "") {
+      alert("Please enter your name!");
+      document.getElementById('name').focus();
+      return false;
+    }
+    else if(document.getElementById('name').value.length < 2){
+      alert("Please enter the name of length > 1");
+      document.getElementById('name').value = "";
+      document.getElementById('name').focus();
+      return false;
+    }
+    else if(!isNaN(document.getElementById('name').value)){
+      alert("Numbers not allowed in name");
+      document.getElementById('name').value = "";
+      document.getElementById('name').focus();
+      return false;
+    }
+    else if(document.getElementById('address').value == ""){
+      alert("Please enter your Address!");
+      document.getElementById('address').focus();
+      return false;
+    }
+    return true;
+  }
+
+ </script>
+
+
+
+
+
+    <!-- jQuery library -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+
+<!-- Popper -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+
+<!-- Latest compiled and minified Bootstrap JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  </div>
+
+
+</body>
+</html>
